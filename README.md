@@ -1,2 +1,2 @@
 # Pygame
-Pygame learning trough small projects
+Pygame learning through small projects
