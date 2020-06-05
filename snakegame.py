@@ -1,7 +1,9 @@
+#importing modules
 import pygame
 import time
 import random
- 
+
+#initializing
 pygame.init()
  
 white = (255, 255, 255)
@@ -27,13 +29,13 @@ snake_speed = 10
 font_style = pygame.font.SysFont("bahnschrift", 25)
 score_font = pygame.font.SysFont("ariel", 35)
  
- 
+#function to show score 
 def Your_score(score):
     value = score_font.render("Your Score: " + str(score), True, yellow)
     dis.blit(value, [0, 0])
  
  
- 
+#design snake 
 def our_snake(snake_block, snake_list):
     for x in snake_list:
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
@@ -75,7 +77,8 @@ def gameLoop():
                         game_close = False
                     if event.key == pygame.K_c:
                         gameLoop()
- 
+            
+        #how to move the snake
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 game_over = True
